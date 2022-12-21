@@ -91,6 +91,8 @@ class Api {
     /* Log för att se att rätt uppgift är på väg att tas bort */
     console.log(`Removing task with id ${id}`);
 
+    
+
     /* Här behövs, precis som vid POST, lite mer inställningar. Fetch behöver dock inte heller här ett requestobjekt. Det går bra att skicka de sakerna som man skulle ha skickat till requestobjektets konstruktor direkt till fetch-funktionen. 
 
     Det som skickas in som förfrågan är alltså url, som första argument och en uppsättning inställningar i ett objekt, som andra argument. Precis som när POST-requesten skapades ovan, i create ovan. 
