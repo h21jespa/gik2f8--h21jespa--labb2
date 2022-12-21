@@ -113,10 +113,9 @@ function renderTask({ id, title, description, dueDate }) {
     (html += `
       <p class="ml-8 mt-2 text-xs italic ">${description}</p>
       <div class="flex items-center pl-4">
-    <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-    <label for="bordered-checkbox-1" class="py-4 ml-2 w-full text-1 font-bold text-pink-800 italic ">Markerad som klar</label>
+    <input id="bordered-checkbox-1" onclick="checkboxstate()" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    <label for="bordered-checkbox-1" class="py-4 ml-2 w-full text-1 font-bold text-pink-800 italic ">Utförd</label>
     </div>
-    
     
   `);
 
@@ -131,6 +130,12 @@ function renderTask({ id, title, description, dueDate }) {
 
   return html;
 }
+/* */
+function checkboxstate() {
+  var state = document.getElementById("bordered-checkbox-1").checked;
+  console.log("klick");
+}
+  
 
 function deleteTask(id) {
   api.remove(id).then((result) => {
