@@ -130,15 +130,15 @@ function renderTask({ id, title, description, dueDate }) {
 
   return html;
 }
-/* */
+
 function checkboxstate(checkbox, id) {
-  var taskItem = document.getElementById(`task-${id}`)
+  var taskItem = document.getElementById(`task-${id}`);
   if (checkbox.checked) {
-    taskItem.style.backgroundColor = "Green"
+    taskItem.style.backgroundColor = "Green";
   } else {
-    taskItem.style.backgroundColor = "Inherit"
+    taskItem.style.backgroundColor = "Inherit";
   }
-};
+}
 
 function deleteTask(id) {
   api.remove(id).then((result) => {
